@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+/************************************/
+/* General */
+/************************************/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap");
+
+html {
+  font-size: 62.5%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  box-sizing: border-box;
+  background-color: #fff;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #000;
+  font-family: "Inter", sans-serif;
+  margin-left: 10rem;
+  margin-right: 10rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/************************************/
+/* Title Bar */
+/************************************/
+.title-bar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-end;
+  margin-top: 5.35rem;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  font-size: 11rem;
+  font-weight: 700;
+  letter-spacing: -0.6rem;
+  margin-left: 2rem;
+  margin-bottom: -2.75rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/************************************/
+/* Color picker */
+/************************************/
+
+.color-picker {
+  width: 9rem !important; /* not sure how to set this otherwise */
+  height: 9rem !important; /* not sure how to set this otherwise */
+}
+
+/************************************/
+/* Card */
+/************************************/
+.card {
+  margin-top: 7rem;
+  margin-left: 5rem;
+}
+
+.card-title {
+  font-size: 1.8rem !important;
+  font-weight: 600 !important;
+  font-family: "Inter", sans-serif !important;
+  letter-spacing: -0.02rem !important;
+}
+
+.card-artist {
+  font-size: 1.4rem !important;
+  font-weight: 600 !important;
+  font-family: "Inter", sans-serif !important;
+  letter-spacing: -0.02rem !important;
 }

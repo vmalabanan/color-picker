@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import TitleBar from "./TitleBar";
+import ArtworkCard from "./ArtworkCard";
 
 function App() {
+  // Fetch Art Institute of Chicago API
+  fetch(
+    "https://api.artic.edu/api/v1/artworks?fields=id,image_id,title,artist_display,date_display,main_reference_number,color,thumbnail,has_not_been_viewed_much,place_of_origin,medium_display,dimensions,credit_line,is_on_view"
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      // const artArray = data.data;
+      // console.log(artArray[1]); // Show info for one piece of art (index 1, in this case)
+      // console.log(artArray[1].color.h); // Isolate the h value of a particular artwork (1, in this case)
+
+      const baseImageEndPt = data.config.iiif_url; // base URL for artwork image
+
+      const imgURLExample =
+        baseImageEndPt +
+        "/" +
+        data.data[1].image_id +
+        "/full/843,/0/default.jpg";
+
+      console.log(imgURLExample);
+    });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <TitleBar />
+      <ArtworkCard />
     </div>
   );
 }
