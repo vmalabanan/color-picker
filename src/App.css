@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap");
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5% !important;
 }
 
 * {
@@ -37,7 +37,7 @@ h1 {
   font-weight: 700;
   letter-spacing: -0.6rem;
   margin-left: 2rem;
-  margin-bottom: -2.75rem;
+  margin-bottom: -2.5rem;
 }
 
 /************************************/
@@ -45,13 +45,27 @@ h1 {
 /************************************/
 
 .color-picker {
-  width: 9rem !important; /* not sure how to set this otherwise */
-  height: 9rem !important; /* not sure how to set this otherwise */
+  width: 8.25rem !important; /* not sure how to set this otherwise -- possibly in sx prop? */
+  height: 8.25rem !important; /* not sure how to set this otherwise -- possibly in sx prop? */
+}
+
+/************************************/
+/* Artwork Grid */
+/************************************/
+
+.artwork-grid-container {
+  display: flex;
+  justify-content: center;
+}
+
+.artwork-grid {
+  width: 95%;
 }
 
 /************************************/
 /* Card */
 /************************************/
+
 .card {
   margin-top: 7rem;
   margin-left: 5rem;
@@ -72,4 +86,68 @@ h1 {
 .card-artist {
   font-size: 1.4rem !important;
   font-weight: 500 !important;
+}
+
+/************************************/
+/* Media Queries */
+/************************************/
+
+/* BELOW 600 px */
+
+@media (max-width: 60rem) {
+  h1 {
+    font-size: 9rem;
+    letter-spacing: -0.45rem;
+    margin-bottom: -1.8rem;
+  }
+
+  .color-picker {
+    width: 7.75rem !important; /* not sure how to set this otherwise -- possibly in sx prop? */
+    height: 7.75rem !important; /* not sure how to set this otherwise -- possibly in sx prop? */
+  }
+}
+
+/* BELOW 500 px */
+
+@media (max-width: 50rem) {
+  h1 {
+    font-size: 7rem;
+    letter-spacing: -0.35rem;
+    margin-bottom: -1.6rem;
+  }
+
+  .color-picker {
+    width: 7rem !important; /* not sure how to set this otherwise -- possibly in sx prop? */
+    height: 7rem !important; /* not sure how to set this otherwise -- possibly in sx prop? */
+  }
+}
+
+/* BELOW 400 px */
+
+@media (max-width: 40rem) {
+  h1 {
+    font-size: 5rem;
+    letter-spacing: -0.2rem;
+    margin-bottom: -1.1rem;
+  }
+}
+
+/* BELOW 350 px */
+
+@media (max-width: 35rem) {
+  h1 {
+    font-size: 4rem;
+    letter-spacing: -0.05rem;
+    margin-bottom: -0.85rem;
+  }
+}
+
+/* BELOW 330 px */
+
+@media (max-width: 33rem) {
+  h1 {
+    font-size: 3.5rem;
+    letter-spacing: -0.05rem;
+    margin-bottom: -0.75rem;
+  }
 }

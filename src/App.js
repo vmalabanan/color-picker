@@ -1,6 +1,7 @@
 import "./App.css";
 import TitleBar from "./TitleBar";
 import ArtworkCard from "./ArtworkCard";
+import ArtworkGrid from "./ArtworkGrid";
 
 function App() {
   // Fetch Art Institute of Chicago API
@@ -31,6 +32,7 @@ function App() {
     <div>
       <TitleBar />
       <ArtworkCard />
+      <ArtworkGrid />
     </div>
   );
 }
