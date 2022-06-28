@@ -5,7 +5,11 @@ import ArtworkCard from "./ArtworkCard";
 function App() {
   // Fetch Art Institute of Chicago API
   fetch(
-    "https://api.artic.edu/api/v1/artworks?fields=id,image_id,title,artist_display,date_display,main_reference_number,color,thumbnail,has_not_been_viewed_much,place_of_origin,medium_display,dimensions,credit_line,is_on_view"
+    "https://api.artic.edu/api/v1/artworks?limit=100&fields=id,image_id,title,artist_display,date_display,main_reference_number,color,thumbnail,has_not_been_viewed_much,place_of_origin,medium_display,dimensions,credit_line,is_on_view"
+
+    // note: limit=X and page=X -- make the values variables?
+
+    // https://api.artic.edu/api/v1/artworks?limit=100&page=1&fields=id,image_id,title,artist_display,date_display,main_reference_number,color,thumbnail,has_not_been_viewed_much,place_of_origin,medium_display,dimensions,credit_line,is_on_view
   )
     .then((response) => response.json())
     .then((data) => {
@@ -21,8 +25,6 @@ function App() {
         "/" +
         data.data[1].image_id +
         "/full/843,/0/default.jpg";
-
-      console.log(imgURLExample);
     });
 
   return (
